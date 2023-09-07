@@ -1,2 +1,2 @@
 #!/bin/bash
-as "$CFILE" | tr '.c' '.s'
+as -c "$CFILE" | tr '.c' '.s'
