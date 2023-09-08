@@ -12,7 +12,6 @@ int main(void)
 	for (letters = start; letters <= end; ++letters)
 {
 	putchar(letters);
-	putchar('\n');
 }
 	return (0);
 }
