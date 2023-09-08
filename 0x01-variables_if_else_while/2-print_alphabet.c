@@ -13,5 +13,6 @@ int main(void)
 {
 	putchar(letters);
 }
+	putchar('\0')
 	return (0);
 }
