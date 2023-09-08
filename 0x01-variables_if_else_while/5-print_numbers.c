@@ -9,8 +9,9 @@ int main(void)
 
 	for (index = 0; index <= 9; ++index)
 {
-	printf("%d\n", index);
+	printf("%d", index);
 }
+	printf("\n");
 
 	return (0);
 }
