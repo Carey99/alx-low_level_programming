@@ -7,8 +7,9 @@ int main(void)
 {
 	char start = 'a';
 	char end = 'z';
+	char letters;
 
-	for (char letters = start; letters <= end; ++letters)
+	for (letters = start; letters <= end; ++letters)
 {
 	putchar(letters);
 	putchar('\n');
