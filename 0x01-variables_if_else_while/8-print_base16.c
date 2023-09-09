@@ -7,7 +7,7 @@ int main(void)
 {
 	char hexadecimal;
 
-	for (hexadecimal = 0; hexadecimal <= 9; hexadecimal++)
+	for (hexadecimal = '0'; hexadecimal <= '9'; hexadecimal++)
 {
 	putchar(hexadecimal);
 }
