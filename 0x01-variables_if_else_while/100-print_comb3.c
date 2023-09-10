@@ -10,7 +10,7 @@ int main(void)
 
 	for (indexL = '0'; indexL < '9'; indexL++)
 {
-	for (indexR = '0'; indexR <= '9'; indexR++)
+	for (indexR = indexL; indexR <= '9'; indexR++)
 {
 	if (indexL != indexR)
 {
