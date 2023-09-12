@@ -12,7 +12,7 @@ int main(void)
 	for (i = 0; Putme[i] != '\0'; i++)
 {
 	putchar(Putme[i]);
-	putchar('\n');
 }
+	putchar('\n');
 	return (0);
 }
