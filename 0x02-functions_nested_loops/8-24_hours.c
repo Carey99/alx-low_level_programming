@@ -14,6 +14,16 @@ void jack_bauer(void)
 	{
 	for (minutes = 0; minutes < 60; minutes++)
 	{
+	if ((hours == 0 && minutes >= 0) || (hours == 23 && minutes <= 59)
+|| (hours >= 1 && hours <= 22))
+	{
+	putchar((hours / 10) + '0');
+	putchar((hours % 10) + '0');
+	putchar(':');
+	putchar((minutes / 10) + '0');
+	putchar((minutes % 10) + '0');
+	putchar('\n');
+	}
 	}
 	}
 }
