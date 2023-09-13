@@ -2,7 +2,9 @@
 #include <stdio.h>
 
 /**
-* int _abs - let us complete value of integer
+* _abs - let us compute absolute values of integer
+*@n: this will be our parameter
+* Return: value of n
 */
 
 int _abs(int n)
@@ -11,5 +13,5 @@ int _abs(int n)
 	{
 	n = -n;
 	}
-	return n;
+	return (n);
 }
