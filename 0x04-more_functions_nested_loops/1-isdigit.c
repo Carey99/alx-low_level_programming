@@ -9,22 +9,9 @@
 
 int _isdigit(int c)
 {
-	int i;
-	int j;
-
-	for (i = 0; i <= 9; i++)
-	{
-	if (c == i)
+	if (c >= 48 && c <= 57)
 	{
 	return (1);
 	}
-	}
-	for (j = 'a'; j <= 'z'; j++)
-	{
-	if (c == j)
-	{
 	return (0);
-	}
-	}
-	return (1);
 }
