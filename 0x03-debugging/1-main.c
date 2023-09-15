@@ -12,12 +12,12 @@ int main(void)
 	printf("Infinite loop incoming :(\n");
 
 	i = 0;
-/**
-* printf - causing loop in while (i < 10)
-* @\\o/\n": Just an emoji
-* Just say anything
-* I don't what to say
-*/
+
+/*	while (i < 10)*/
+	{
+	putchar(i);
+	}
+
 	printf("Infinite loop avoided! \\o/\n");
 
 	return (0);
