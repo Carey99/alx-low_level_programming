@@ -3,7 +3,7 @@
 
 /**
 * puts_half - puts half
-* @str: Our parameter 
+* @str: Our parameter
 */
 
 void puts_half(char *str)
@@ -12,7 +12,7 @@ void puts_half(char *str)
 	int n;
 
 	i = 0;
-	while(str[i] != 0)
+	while (str[i] != 0)
 	{
 	i++;
 	}
@@ -23,7 +23,7 @@ void puts_half(char *str)
 	}
 	if (i % 2 != 0)
 	{
-	_putchar(str[i - 1]);
+	_putchar(str[i]);
 	}
 	_putchar('\n');
 }
