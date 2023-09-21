@@ -12,7 +12,6 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int i;
 	int c;
-	int ttsp;
 
 	c = 0;
 	i = 0;
@@ -20,8 +19,6 @@ char *_strncat(char *dest, char *src, int n)
 	{
 	i++;
 	}
-	ttsp = sizeof(dest) - i - 1;
-	n = (n < ttsp) ? n : ttsp;
 	while (src[c] != '\0' && c < n)
 	{
 	dest[i] = src[c];
