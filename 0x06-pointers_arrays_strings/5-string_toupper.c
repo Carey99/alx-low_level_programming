@@ -4,6 +4,7 @@
 
 /**
 * string_toupper - prints lowercase to uppercase
+* @str: Parameter
 * Return: str success
 */
 
