@@ -2,7 +2,7 @@
 
 /**
 * leet - encoding a string and chsnging characters
-* @s: Parameter
+* @x: Parameter
 * Return: str for success
 */
 
@@ -13,8 +13,9 @@ char *leet(char *x)
 
 	char S1[] = "aAeEoOtTlL";
 	char S2[] = "4433007711";
+
 	c = 0;
-	while(x[c] != '\0')
+	while (x[c] != '\0')
 	{
 	for (k = 0; k < 10; k++)
 	{
