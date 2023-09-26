@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
-* _chessboard - prints chess board
-* @(*a)[8]): Dimensional array
+* print_chessboard - prints chess board
+* @a: Dimensional array
 */
 
 void print_chessboard(char (*a)[8])
