@@ -4,7 +4,7 @@
 
 /**
  * word_count - Counts the no of words in str
- * @str: name of str
+ * @s: name of str
  * Return: The number of words
  */
 
@@ -29,46 +29,28 @@ int word_count(char *s)
 
 	return (c);
 }
-
 /**
  * strtow - Splits a string
  * @str: Nam of string
  * Return: A pointer to an array of string
  */
-
 char **strtow(char *str)
 {
-	char **words;
-	int c, length;
-	char *token;
-	int num_words;
-	int i;
+	char **words, *token;
+	int c = 0, length = 0, num_words = 0, i = 0;
 
-	num_words = i = c = length = 0;
 	if (str == NULL || *str == 0)
-	{
 	return (NULL);
-	}
-
 	num_words = word_count(str);
-
 	if (num_words == 0)
-	{
 	return (NULL);
-	}
 	words = malloc((num_words + 1) * sizeof(char *));
-
 	if (words == 0)
-	{
 	return (NULL);
-	}
-
 	for (; *str != '\0' &&  i < num_words;)
 	{
 	if (*str == ' ')
-	{
 	str++;
-	}
 	else
 	{
 	token = str;
