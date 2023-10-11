@@ -11,10 +11,21 @@
 void print_name(char *name, void (*f)(char *))
 {
 	f(name);
+}
 
-	while (*name != '\0')
+/**
+* prints_name - Func calls
+* @name: String to b
+*/
+
+void prints_name(char *name)
+{
+	int i = 0;
+
+	while (name[i] != '\0')
 	{
-	putchar(*name);
-	name++;
+	putchar(name[i]);
+	i++;
 	}
+	putchar('\n');
 }
