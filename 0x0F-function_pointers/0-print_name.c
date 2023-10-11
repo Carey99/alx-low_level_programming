@@ -3,7 +3,7 @@
 
 /**
 * print_name - Prints name
-* @name: Parmeter to be printed
+* @name: What to be printed
 * @f: Determines how name is printed
 */
 
