@@ -15,10 +15,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list num_arg;
 
 	va_start(num_arg, n);
-	if (separator == NULL)
-	{
-	return;
-	}
 	for (i = 0; i < n; i++)
 	{
 	char *str = va_arg(num_arg, char *);
