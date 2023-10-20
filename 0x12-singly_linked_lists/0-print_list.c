@@ -1,30 +1,26 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "lists.h"
+#include <stdio.h>
 
 /**
-* print_list - Prints all elements in a list
-* @h: List holding nodes
+* print_list - Prints all
+* @h: List of node to be printed
 * Return: Number of nodes
 */
 
 size_t print_list(const list_t *h)
 {
-	int length = 0;
+	size_t nodes = 0;
 
-	while (h)
+	while (h != NULL)
 	{
-		if (h->str == NULL)
-		{
-		printf("[0] (nil)\n");
-		}
-		else
-		{
-		printf("[%d]%s\n", h->len, h->str);
-		}
-		length++;
-		h = h->next;
+	if (h->str == NULL)
+	{
+	printf("[0] (nil)\n");
 	}
-	return (length);
+	else
+	printf("[%u]%s\n", h->len, h->str);
+	nodes++;
+	h = h->next;
+	}
+	return (nodes);
 }
