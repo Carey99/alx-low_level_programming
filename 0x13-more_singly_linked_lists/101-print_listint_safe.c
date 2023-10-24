@@ -20,12 +20,12 @@ size_t print_listint_safe(const listint_t *head)
 	}
 	while (ptr != NULL)
 	{
-	printf("[%p] %d\n", (void *)((unsigned long)ptr % 10000000), ptr->n);
+	printf("[%p] %d\n", (void *)((unsigned long)ptr % 100000000), ptr->n);
 	nodes++;
 	if (ptr <= ptr->next)
 	{
 	printf("-> [%p] %d\n", (void *)((unsigned long)ptr->next %
-10000000), ptr->next->n);
+100000000), ptr->next->n);
 	return (nodes);
 	}
 	ptr = ptr->next;
