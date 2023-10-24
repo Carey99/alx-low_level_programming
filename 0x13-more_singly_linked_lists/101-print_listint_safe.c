@@ -20,15 +20,7 @@ size_t print_listint_safe(const listint_t *head)
 	}
 	while (ptr != NULL)
 	{
-	if (ptr != NULL)
-	{
 	printf("[%p] %d\n", (void *)ptr, ptr->n);
-	}
-	else
-	{
-	printf("(nil) (nil)\n");
-	return nodes;
-	}
 	nodes++;
 	if (ptr <= ptr->next)
 	{
