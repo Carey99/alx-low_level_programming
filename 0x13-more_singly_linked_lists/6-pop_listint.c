@@ -10,23 +10,17 @@
 
 int pop_listint(listint_t **head)
 {
-	listint_t *ptr = *head, *prev;
+	listint_t *ptr;
 	int deleted_data;
 
 	if (*head == NULL)
 	{
 	return (0);
 	}
-	while (ptr->next != NULL)
-	{
-	prev = ptr;
-	ptr = ptr->next;
-	}
-	deleted_data = ptr->n;
-	if (prev != NULL)
-	prev->next = NULL;
-	*head = NULL;
+	ptr = *head;
+	*head = ptr->next;
 
+	deleted_data = ptr->n;
 	free(ptr);
 	return (deleted_data);
 }
