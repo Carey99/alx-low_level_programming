@@ -12,6 +12,10 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned int result = n ^ m;
 	unsigned int i = 0;
 
+	if (sizeof(n) != sizeof(m) * 8)
+	{
+	return (-1);
+	}
 	while (result)
 	{
 	i += result & 1;
