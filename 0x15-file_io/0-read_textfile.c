@@ -30,17 +30,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 	{
+	free(str);
 	return (0);
 	}
 	bytes_read = read(fd, str, letters);
 	if (bytes_read == -1)
 	{
+	close(fd);
+	free(str);
 	return (0);
 	}
 	str[bytes_read] = '\0';
 	bytes_written = write(0, str, bytes_read);
 	if (bytes_written == -1 || (size_t)bytes_written != (size_t)bytes_read)
 	{
+	close(fd);
 	free(str);
 	return (0);
 	}
