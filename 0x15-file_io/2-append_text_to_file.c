@@ -26,12 +26,15 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 	return (-1);
 	}
+	if (text_content != NULL)
+	{
 	text_len = strlen(text_content);
 	bytes_written = write(fd, text_content, text_len);
 	if (bytes_written != text_len)
 	{
 	close(fd);
 	return (-1);
+	}
 	}
 	close(fd);
 	return (1);
