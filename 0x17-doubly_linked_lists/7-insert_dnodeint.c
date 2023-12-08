@@ -1,26 +1,5 @@
 #include "lists.h"
 /**
- * addempty - Add empty node
- * @head: Pointer to first node
- * @n: Data value to be added to node
- * Return: Head
- */
-dlistint_t *addempty(dlistint_t *head, int n)
-{
-	dlistint_t *temp = malloc(sizeof(dlistint_t));
-
-	if (temp == NULL)
-	{
-		return (NULL);
-	}
-	temp->prev = NULL;
-	temp->n = n;
-	temp->next = NULL;
-	head = temp;
-
-	return (head);
-}
-/**
  * insert_dnodeint_at_index - Insert ata given index
  * @h: Pointer iterating through list
  * @idx: Index to insert node
@@ -29,31 +8,40 @@ dlistint_t *addempty(dlistint_t *head, int n)
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	unsigned int i = 0;
-	dlistint_t *new_node = NULL;
-	dlistint_t *temp = *h;
-	dlistint_t *temp2 = NULL;
+	dlistint_t *new_node, *current;
+	unsigned int i;
 
-	new_node = addempty(new_node, n);
-	while (i < idx && temp != NULL)
+	if (h == NULL)
+		return (NULL);
+
+	new_node = malloc(sizeof(dlistint_t));
+	if (new_node == NULL)
+		return (NULL);
+	new_node->n = n;
+	new_node->prev = NULL;
+	new_node->next = NULL;
+	if (idx == 0)
 	{
-		temp = temp->next;
-		i++;
+		new_node->next = *h;
+		if (*h != NULL)
+			(*h)->prev = new_node;
+		*h = new_node;
+		return (new_node);
 	}
-	if (i < idx || temp == NULL)
+	current = *h;
+	for (i = 0; i < idx - 1 && current != NULL; i++)
+	{
+		current = current->next;
+	}
+	if (current == NULL)
 	{
 		free(new_node);
 		return (NULL);
 	}
-	temp2 = temp->next;
-	temp->next = new_node;
-	if (temp2 != NULL)
-	{
-		temp2->prev = new_node;
-	}
-
-	new_node->next = temp2;
-	new_node->prev = temp;
-
+	new_node->prev = current;
+	new_node->next = current->next;
+	if (current->next != NULL)
+		current->next->prev = new_node;
+	current->next = new_node;
 	return (new_node);
 }
