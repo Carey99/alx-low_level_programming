@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-"""Return perimeter of grid
-    Grid - list of int [1, 2, 4]
-    0 - represent waterzone
-    1 - represent land zone
-    One cell is square with length 1"""
+"""Finding the PAREMETER of island"""
 
 
 def island_perimeter(grid):
+    """Returns parameter"""
+
     height = len(grid)
     width = len(grid[0])
     size = 0
