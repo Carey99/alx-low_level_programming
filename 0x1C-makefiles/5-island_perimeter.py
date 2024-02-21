@@ -4,6 +4,8 @@
     0 - represent waterzone
     1 - represent land zone
     One cell is square with length 1"""
+
+
 def island_perimeter(grid):
     height = len(grid)
     width = len(grid[0])
